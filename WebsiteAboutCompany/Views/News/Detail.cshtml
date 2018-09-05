@@ -1,0 +1,54 @@
+﻿
+
+@model Model.EF.News
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/assets/client/css/websitecompany.css" rel="stylesheet" />
+<!-- inner banner -->
+<div class="inner_banner layer" id="home" style="background:url(http://streaming1.danviet.vn/upload/2-2015/images/2015-04-20/1434180134-qaamde_thuong_10_xcnq.jpg)no-repeat center;background-size:100%">
+    <div class="container">
+        <div class="agileinfo-inner">
+            <h3 class="text-center text-white">
+                @Model.Name
+            </h3>
+        </div>
+    </div>
+</div>
+<!-- //inner banner -->
+<!-- breadcrumbs -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/">Trang Chủ</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="@Url.Action("Index","News")">Tin tức</a>
+        </li>
+
+        <li class="breadcrumb-item active" aria-current="page">@Model.Name</li>
+    </ol>
+</nav>
+<!-- //breadcrumbs -->
+<div class="content detail-news">
+    <div class="content_top">
+        <div class="heading detail-name">
+            <h3>@Model.Name</h3>
+            <span>
+                Người đăng :    @Model.CreateBy - @Model.CreateDate
+            </span>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="image-detail">
+        <img src="http://streaming1.danviet.vn/upload/2-2015/images/2015-04-20/1434180134-qaamde_thuong_10_xcnq.jpg" style="width:100%"/>
+        <hr style="width:2px;align-content:center" />
+    </div>
+    <div class="section-group">
+        @Html.Raw(Model.Detail)
+    </div>
+</div>
+
+

@@ -1,0 +1,121 @@
+﻿@using WaveEngine.Framework.Resources
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Welcome to Admin</a>
+    </div>
+    <!-- /.navbar-header -->
+    <ul class="nav navbar-top-links navbar-right">
+        <li>
+            @using (Html.BeginForm("ChangeCulture","Base"))
+            {
+                @Html.Hidden("returnUrl",Request.RawUrl)
+            }
+        </li>
+
+        
+        <!-- /.dropdown -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i>Xin chào @(((UserLogin)Session[WebsiteAboutCompany.Common.CommonConstants.USER_SESSION]).UserName) ! <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li class="divider"></li>
+                <li>
+                    <a href="/Admin/Login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+    </ul>
+    <!-- /.navbar-top-links -->
+    
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li>
+                    <a href="/Admin/Home/Index"><i class="fa fa-dashboard fa-fw"></i> Trang chủ</a>
+                </li>
+                @if (((UserLogin)Session[WebsiteAboutCompany.Common.CommonConstants.USER_SESSION]).GroupID == "ADMIN")
+                {
+                    <li>
+                        <a href="/Admin/Contacts/Index"><i class="fa fa-dashboard fa-fw"></i> Contacts</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> Hệ thống<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/Admin/UserGroups/Index">Nhóm người dùng</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/User/Index">User</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Credentials/Index">Credentials</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bell fa-fw"></i> Sản phẩm<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/Admin/CategoryServices/Index">Danh mục</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Services/Index">Sản phẩm</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản lý chung<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/Admin/Abouts/Index">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Footers/Index">Foooter</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Menus/Index">Menu</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/MenuTypes/Index">Menu Type</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Slides/Index">Slide</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/Feedbacks/Index">Phản hồi</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                }
+                    <li>
+                        <a href="#"><i class="fa fa-comment fa-fw"></i> Tin tức<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="/Admin/CategoryNews/Index">Danh mục</a>
+                            </li>
+                            <li>
+                                <a href="/Admin/News/Index">Tin tức</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+</nav>

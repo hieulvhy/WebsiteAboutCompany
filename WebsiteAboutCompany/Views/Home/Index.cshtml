@@ -1,0 +1,301 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listServices = (List<Model.EF.Service>)ViewBag.NewServices;
+    var listNews = (List<Model.EF.News>)ViewBag.ListNews;
+}
+<style>
+    .vietiser-img img {
+        border-radius: 50%;
+    }
+
+    .item-thumb img {
+        width: 100%;
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        height: auto;
+    }
+
+    img {
+        border-width: 0px;
+        border-style: initial;
+        border-color: initial;
+        border-image: initial;
+    }
+</style>
+<!-- banner -->
+<div class="banner layer" id="home">
+    <div class="container">
+        <div class="banner-text">
+            <div class="slider-info">
+                <div class="agileinfo-logo">
+                    <h3 style="font-size: 125px;">
+                        <span class="fab fa-linode text-center"></span> Wellcome to VietIS
+                    </h3>
+                </div>
+                <h3 class="txt-w3_agile">In Pursuit of Exellence</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- banner bottom -->
+<section class="w3ls-bnrbtm py-5" id="w3layouts_bnrbtm">
+    <!-- title description  -->
+    <div class="container py-sm-5">
+        <div class="row pt-lg-5">
+            <div class="col-lg-5  bb-left">
+                <span class="w3-line">CEO Message</span>
+                <h3 class="agile-title">Improve continuously to bring success to Customer’s Offshore Project</h3>
+            </div>
+            <div class="col-lg-7 mt-lg-0 mt-3 px-lg-5">
+                <p>
+                    Chúng tôi muốn cảm ơn bạn đã hợp tác với chúng tôi.
+                </p>
+                <p>
+                    VIETIS được thành lập vào năm 2009 tại Hà Nội, tập trung vào thị trường Nhật Bản. Chúng tôi đảm bảo cung cấp các dịch vụ phần mềm đáng tin cậy ra nước ngoài với chi phí thấp nhưng chất lượng cao. Cho đến nay, chúng tôi đã cung cấp một số dịch vụ như phát triển ứng dụng / bảo trì, điện toán đám mây, phát triển / bảo trì di động, thiết kế trang web / phát triển, phát triển hệ thống hỗ trợ cho khách hàng của chúng tôi.
+                    Chúng tôi muốn cảm ơn bạn đã hợp tác với chúng tôi.
+                </p>
+                <p>
+                    Kinh nghiệm rộng của chúng tôi cho phép chúng tôi tạo ra các ứng dụng sáng tạo kết hợp các nền tảng di động, công nghệ web động và các ứng dụng doanh nghiệp back-end thành một giải pháp tích hợp. Chúng tôi cung cấp cho bạn những điều tốt nhất của cả hai thế giới: Chúng tôi nói ngôn ngữ của bạn. Chúng tôi hiểu các yêu cầu cho ứng dụng của bạn và mong đợi của bạn về chất lượng và tính chuyên nghiệp. Chúng tôi có khả năng thực hiện tầm nhìn của bạn bằng cách sử dụng các kỹ sư hàng đầu.
+                </p>
+                <p>
+                    Chúng tôi rất mong được tiếp tục và hỗ trợ thêm cho dịch vụ tốt hơn của chúng tôi trong tương lai.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- //title description  -->
+</section>
+<!-- //banner bottom -->
+<!-- about -->
+<section class="py-sm-5 py-3">
+    <div class="container">
+        <div class="agileabt-w3 py-lg-5">
+            <div class="row my-md-5 mt-sm-5 my-4">
+                <!-- about left grid -->
+                <div class="col-lg-12 order-lg-0 order-1  mt-lg-0 mt-5">
+                    <div class="row">
+                        <div class="col-6 w3-ab">
+                            <div class="w3-ab-grid">
+                                <div class="w3-aicon p-lg-5 p-4">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h4 class="my-3 text-capitalize text-dark">Dynamics Resources</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 w3-ab">
+                            <div class="w3-ab-grid">
+                                <div class="w3-aicon p-lg-5 p-4">
+                                    <i class="fab fa-magento"></i>
+                                    <h4 class="my-3 text-capitalize text-dark">Security</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 mt-4 w3-ab">
+                            <div class="w3-ab-grid">
+                                <div class="w3-aicon  p-lg-5 p-4">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <h4 class="my-3 text-capitalize text-dark">Comunication</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 mt-4 w3-ab">
+                            <div class="w3-ab-grid">
+                                <div class="w3-aicon p-lg-5 p-4">
+                                    <i class="fab fa-accusoft"></i>
+                                    <h4 class="my-3 text-capitalize text-dark">Standard Process</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //about -->
+<!-- case studies -->
+<section class="case_w3ls  py-5" id="w3layouts_cs">
+    <div class="container py-sm-5">
+        <!-- title description -->
+        @*<div class="row py-lg-5">
+                <div class="col-lg-5  bb-left">
+                    <span class="w3-line">case studies</span>
+                    <h3 class="agile-title">the new brand identity</h3>
+                </div>
+                <div class="col-lg-7 mt-lg-0 mt-3 px-lg-5">
+                    <p>
+                        Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci. Nulla accumsan
+                        ac elit in congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos Class aptent taciti
+                        sociosqu ad litora torquent p himenaeos.
+                    </p>
+                    <a class="btn btn-danger  mt-sm-4 text-capitalize" href="error.html" role="button">read more</a>
+                </div>
+            </div>*@
+        <!-- //title description -->
+        <!-- case studies row -->
+        <h3 class="agile-title">Tin tức nổi bật</h3>
+        <div class="row pt-5">
+
+            @foreach (var item in listNews)
+            {
+                var url = "/News/Detail/" + item.ID;
+                <div class="col-lg-4 col-md-6">
+                    <div class="img1 img-grid   align-items-end justify-content-center p-3">
+                        <div class="img_text_w3ls">
+                            <a href="@url">
+                                <h4>
+                                    @if (item.Name.Length >= 50)
+                                    {
+                                        @(item.Name.Substring(0, 50) + "...")
+                                    }
+                                    else
+                                    {
+                                        @item.Name
+                                    }
+                                </h4>
+                            </a>
+                            <span> </span>
+                            <p>
+                                @if (item.Description.Length <= 160)
+                                {
+                                    @item.Description
+                                }
+                                else
+                                {
+                                    @(item.Description.Substring(0, 160) + "...")
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <!-- //case studies row -->
+
+    </div>
+
+</section>
+<section class="case_w3ls  ">
+    <div class="container py-sm-5">
+        <h3 class="agile-title">Các VietISer nói gì?</h3>
+        <div class="row pt-5">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="item post-133 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-5">
+                            <figure class="item-thumb vietiser-img" style="margin:0;">
+                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n.jpg 960w" sizes="(max-width: 500px) 100vw, 500px">
+                            </figure>
+                            <span>Mai Phương</span>
+                            <p>- Kế toán trưởng</p>
+                        </div>
+                        <div class="col-xs-8 col-md-7" style="padding: 0; text-align: left;">
+                            <p>VietIS trong tôi là yêu thương! Albert Camus đã nói: “Không có lao động, mọi cuộc sống đều trở lên mục ruỗng. Nhưng khi lao động không hồn, cuộc sống ngột ngạt và chết”! Tình yêu và công việc – những điều quan trọng nhất đối với tôi và may[…]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="item post-129 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-5">
+                            <figure class="item-thumb vietiser-img" style="margin:0;">
+
+                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n.jpg 834w" sizes="(max-width: 500px) 100vw, 500px">
+
+                            </figure>
+                            <span>Đoàn Thị Trang</span>
+                            <p>- Tester</p>
+                        </div>
+                        <div class="col-xs-8 col-md-7" style="padding: 0; text-align: left;">
+                            <p>Mình đã có những điều “đầu tiên…” Là một tester đầu tiên vào công ty được tuyển vào với tư cách là nhân viên chính thức, mình cảm nhận rất rõ sự thay đổi từ từ số lượng nhân viên cho đến quy trình làm việc tính đến thời điểm[…]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="item post-28 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-5">
+                            <figure class="item-thumb vietiser-img" style="margin:0;">
+
+                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n.jpg 960w" sizes="(max-width: 500px) 100vw, 500px">
+
+                            </figure>
+                            <span>Nguyễn Thùy Dung</span>
+                            <p>- Quality Assurance</p>
+                        </div>
+                        <div class="col-xs-8 col-md-7" style="padding: 0; text-align: left;">
+                            <p>Foucaultist power relations If one examines constructivism, one is faced with a choice: either reject precapitalist theory or conclude that context is created Bình luận bình luận</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="item post-131 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-5">
+                            <figure class="item-thumb vietiser-img" style="margin:0;">
+
+                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-500x500.jpeg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-500x500.jpeg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-150x150.jpeg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-100x100.jpeg 100w" sizes="(max-width: 500px) 100vw, 500px">
+
+                            </figure>
+                            <span>Nguyễn Đức Toàn</span>
+                            <p>- Technical Leader</p>
+                        </div>
+                        <div class="col-xs-8 col-md-7" style="padding: 0; text-align: left;">
+                            <p>“Nếu thế giới chống lại IS, chúng tôi ủng hộ thế giới… nếu thế giới chống lại VietIS, chúng tôi chống lại thế giới…”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="item post-127 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-5">
+                            <figure class="item-thumb vietiser-img" style="margin:0;">
+
+                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n.jpg 629w" sizes="(max-width: 500px) 100vw, 500px">
+
+                            </figure>
+                            <span>Giang Văn Diện</span>
+                            <p>- Lập trình viên</p>
+                        </div>
+                        <div class="col-xs-8 col-md-7" style="padding: 0; text-align: left;">
+                            <p>Foucaultist power relations If one examines constructivism, one is faced with a choice: either reject precapitalist theory or conclude that context is created</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="item post-332 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-5">
+                            <figure class="item-thumb vietiser-img" style="margin:0;">
+                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n.jpg 539w" sizes="(max-width: 500px) 100vw, 500px">
+                            </figure>
+                            <span>Nguyễn Văn Điệp</span>
+                            <p>- Lập trình viên</p>
+                        </div>
+                        <div class="col-xs-8 col-md-7" style="padding: 0; text-align: left;">
+                            <p>Em yêu hỡi mùa xuân vừa về tới Cánh hoa đào nay cũng đã rong chơi Hòa cung mai tô điểm khắp đất trời Xuân sắc thắm rạng ngời bao hy vọng Em có nhớ Hà Nội chiều thơ mộng Phút Thanh Bình ta mến ngỏ lời thương Bao loài[…]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- //case studies row -->
+
+    </div>
+
+</section>
+
