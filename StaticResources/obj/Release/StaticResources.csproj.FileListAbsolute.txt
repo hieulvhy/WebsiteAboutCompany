@@ -1,0 +1,11 @@
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\bin\Release\StaticResources.dll
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\bin\Release\StaticResources.pdb
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\bin\Release\en\StaticResources.resources.dll
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Release\StaticResources.csprojAssemblyReference.cache
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Release\StaticResources.Resources.resources
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Release\StaticResources.Resources.en.resources
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Release\StaticResources.csproj.GenerateResource.cache
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Release\StaticResources.csproj.CoreCompileInputs.cache
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Release\en\StaticResources.resources.dll
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Release\StaticResources.dll
+E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Release\StaticResources.pdb

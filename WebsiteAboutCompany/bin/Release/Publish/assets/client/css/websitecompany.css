@@ -1,0 +1,18 @@
+﻿.detail-news {
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+}
+
+.detail-name {
+    margin-bottom: 5%
+}
+
+    .detail-name h3 {
+        font-size: 35px;
+    }
+
+.image-detail {
+    margin-bottom: 10%;
+}
