@@ -36,3 +36,22 @@ E:\WebsiteAboutCompany\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 E:\WebsiteAboutCompany\Model\obj\Debug\Model.csproj.CopyComplete
 E:\WebsiteAboutCompany\Model\obj\Debug\Model.dll
 E:\WebsiteAboutCompany\Model\obj\Debug\Model.pdb
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\Model.dll.config
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\Model.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\Model.pdb
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\Common.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\EntityFramework.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\PagedList.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\PagedList.Mvc.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\Common.pdb
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\Common.dll.config
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\EntityFramework.xml
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\PagedList.xml
+E:\ĐA\New folder\WebsiteAboutCompany\Model\bin\Debug\PagedList.Mvc.xml
+E:\ĐA\New folder\WebsiteAboutCompany\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\ĐA\New folder\WebsiteAboutCompany\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\ĐA\New folder\WebsiteAboutCompany\Model\obj\Debug\Model.csproj.CopyComplete
+E:\ĐA\New folder\WebsiteAboutCompany\Model\obj\Debug\Model.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Model\obj\Debug\Model.pdb

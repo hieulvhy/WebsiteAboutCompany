@@ -15,11 +15,12 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         private CompanyDbContext db = new CompanyDbContext();
 
         // GET: Admin/Credentials
+        [HasCredential(RoleID = "VIEW_USER")]
         public ActionResult Index()
         {
             return View(db.Credentials.ToList());
         }
-
+        [HasCredential(RoleID = "VIEW_USER")]
         // GET: Admin/Credentials/Details/5
         public ActionResult Details(string id)
         {
@@ -36,6 +37,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         }
 
         // GET: Admin/Credentials/Create
+        [HasCredential(RoleID = "ADD_USER")]
         public ActionResult Create()
         {
             return View();
@@ -46,6 +48,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "ADD_USER")]
         public ActionResult Create([Bind(Include = "UserGroupID,RoleID")] Credential credential)
         {
             if (ModelState.IsValid)
@@ -59,6 +62,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         }
 
         // GET: Admin/Credentials/Edit/5
+        [HasCredential(RoleID = "EDIT_USER")]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -78,6 +82,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "EDIT_USER")]
         public ActionResult Edit([Bind(Include = "UserGroupID,RoleID")] Credential credential)
         {
             if (ModelState.IsValid)

@@ -1,0 +1,15 @@
+﻿
+
+<h3 class="mb-3">Tin Tuyển Dụng</h3>
+@foreach (var item in ViewBag.TopNews)
+{
+    var url = "/News/Detail/" + item.Id;
+<div style="padding: 0 15px; text-align: left;">
+    <p class="item-title" style="font-size: 14px;"><a target="_blank" href="@url">@item.Name</a></p>
+    <div class="entry-content" style="color: #8a8080">
+        Ngày đăng: @item.ModifiedDate
+
+    </div>
+
+</div>
+}

@@ -16,6 +16,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         private CompanyDbContext db = new CompanyDbContext();
 
         // GET: Admin/Services
+        [HasCredential(RoleID = "VIEW_USER")]
         public ActionResult Index(string searchString, int page = 1, int pageSize = 10)
         {
             
@@ -29,6 +30,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         }
 
         // GET: Admin/Services/Details/5
+        [HasCredential(RoleID = "VIEW_USER")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -44,6 +46,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         }
 
         // GET: Admin/Services/Create
+        [HasCredential(RoleID = "ADD_USER")]
         public ActionResult Create()
         {
             SetViewBag();
@@ -55,6 +58,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateInput(false)]
+        [HasCredential(RoleID = "ADD_USER")]
         public ActionResult Create([Bind(Include = "ID,Name,Description,Image,Detail,Status,CreateDate,CreateBy,ModifiedDate,ModifiedBy,CategoryServicesID")] Service service)
         {
             if (ModelState.IsValid)
@@ -69,6 +73,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         }
 
         // GET: Admin/Services/Edit/5
+        [HasCredential(RoleID = "EDIT_USER")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -90,6 +95,7 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateInput(false)]
+        [HasCredential(RoleID = "EDIT_USER")]
         public ActionResult Edit([Bind(Include = "ID,Name,Description,Image,Detail,Status,CreateDate,CreateBy,ModifiedDate,ModifiedBy,CategoryServicesID")] Service service)
         {
             if (ModelState.IsValid)

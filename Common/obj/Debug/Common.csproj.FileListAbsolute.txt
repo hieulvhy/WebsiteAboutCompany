@@ -30,3 +30,19 @@ E:\WebsiteAboutCompany\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 E:\WebsiteAboutCompany\Common\obj\Debug\Common.csproj.CopyComplete
 E:\WebsiteAboutCompany\Common\obj\Debug\Common.dll
 E:\WebsiteAboutCompany\Common\obj\Debug\Common.pdb
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\Common.dll.config
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\Common.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\Common.pdb
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\EntityFramework.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\EntityFramework.SqlServer.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\PagedList.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\PagedList.Mvc.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\EntityFramework.xml
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\EntityFramework.SqlServer.xml
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\PagedList.xml
+E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\PagedList.Mvc.xml
+E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.csprojAssemblyReference.cache
+E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.csproj.CopyComplete
+E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.dll
+E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.pdb
