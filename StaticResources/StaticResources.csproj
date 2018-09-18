@@ -63,12 +63,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CKFinderScripts\CHANGELOG.html" />
-    <Content Include="CKFinderScripts\ckfinder.html" />
-    <Content Include="CKFinderScripts\ckfinder.js" />
-    <Content Include="CKFinderScripts\config.js" />
-    <Content Include="CKFinderScripts\LICENSE.html" />
-    <Content Include="CKFinderScripts\README.html" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\ckeditor.js" />
     <Content Include="Scripts\ckeditor\config.js" />
