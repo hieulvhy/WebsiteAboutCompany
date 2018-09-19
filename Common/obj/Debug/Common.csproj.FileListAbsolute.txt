@@ -41,7 +41,6 @@ E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\EntityFramework.xml
 E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\EntityFramework.SqlServer.xml
 E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\PagedList.xml
 E:\ĐA\New folder\WebsiteAboutCompany\Common\bin\Debug\PagedList.Mvc.xml
-E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.csprojAssemblyReference.cache
 E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.csproj.CopyComplete
 E:\ĐA\New folder\WebsiteAboutCompany\Common\obj\Debug\Common.dll

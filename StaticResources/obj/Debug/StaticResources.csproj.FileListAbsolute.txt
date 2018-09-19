@@ -23,7 +23,6 @@ E:\WebsiteAboutCompany\StaticResources\obj\Debug\StaticResources.pdb
 E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\bin\Debug\StaticResources.dll
 E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\bin\Debug\StaticResources.pdb
 E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\bin\Debug\en\StaticResources.resources.dll
-E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Debug\StaticResources.csprojAssemblyReference.cache
 E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Debug\StaticResources.Resources.resources
 E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Debug\StaticResources.Resources.en.resources
 E:\ĐA\New folder\WebsiteAboutCompany\StaticResources\obj\Debug\StaticResources.csproj.GenerateResource.cache

@@ -163,3 +163,4 @@ E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\obj\Release\WebsiteAbo
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\obj\Release\WebsiteAboutCompany.csproj.CopyComplete
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\obj\Release\WebsiteAboutCompany.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\obj\Release\WebsiteAboutCompany.pdb
+E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\CKFinder.dll

@@ -26,6 +26,102 @@
         border-color: initial;
         border-image: initial;
     }
+
+    .img-responsive {
+        height: auto;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 18px;
+        line-height: 22px;
+        color: #3b5998;
+        margin: 15px 0px 10px;
+    }
+
+    .summary {
+        font-weight: 400;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        height: 44px;
+        font-size: 14px;
+    }
+    .clear-fix {
+        clear: both;
+    }
+    #services {
+        float: left;
+        width: 100%;
+        background-color: #edf0f6 !important;
+        padding: 40px 0px 30px;
+    }
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #services .title {
+        color: #3b5998;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .owl-carousel {
+        display: block;
+        width: 100%;
+        z-index: 1;
+    }
+    .owl-carousel, .owl-carousel .owl-item {
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+    }
+    .item-content-sv {
+        text-align: center;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        float: left;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #services .item-content .image {
+        text-align: center;
+        vertical-align: middle;
+        height: 80px;
+        margin: 0px;
+        line-height: 80px;
+    }
+    #services .item-content img {
+        vertical-align: middle;
+        display: inline-block;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        width: auto;
+    }
+    a {
+        color: #333333;
+        text-decoration: none;
+    }
+    .img-sv {
+        border: 1px solid #dddddd;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-box-shadow: 1px 2px 5px -4px rgba(0,0,0,0.51);
+        -moz-box-shadow: 1px 2px 5px -4px rgba(0,0,0,0.51);
+        box-shadow: 1px 2px 5px -4px rgba(0,0,0,0.51);
+        margin-bottom: 20px;
+    }
+    .vietiser {
+        background-color: #edf0f6 !important;
+    }
 </style>
 <!-- banner -->
 <div class="banner layer" id="home">
@@ -74,71 +170,116 @@
 <!-- //banner bottom -->
 <!-- about -->
 <section class="py-sm-5 py-3">
-    <div class="container">
-        <div class="agileabt-w3 py-lg-5">
-            <div class="row my-md-5 mt-sm-5 my-4">
-                <!-- about left grid -->
-                <div class="col-lg-12 order-lg-0 order-1  mt-lg-0 mt-5">
-                    <div class="row">
-                        <div class="col-6 w3-ab">
-                            <div class="w3-ab-grid">
-                                <div class="w3-aicon p-lg-5 p-4">
-                                    <i class="fas fa-chart-line"></i>
-                                    <h4 class="my-3 text-capitalize text-dark">Dynamics Resources</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 w3-ab">
-                            <div class="w3-ab-grid">
-                                <div class="w3-aicon p-lg-5 p-4">
-                                    <i class="fab fa-magento"></i>
-                                    <h4 class="my-3 text-capitalize text-dark">Security</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 mt-4 w3-ab">
-                            <div class="w3-ab-grid">
-                                <div class="w3-aicon  p-lg-5 p-4">
-                                    <i class="fas fa-chart-pie"></i>
-                                    <h4 class="my-3 text-capitalize text-dark">Comunication</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 mt-4 w3-ab">
-                            <div class="w3-ab-grid">
-                                <div class="w3-aicon p-lg-5 p-4">
-                                    <i class="fab fa-accusoft"></i>
-                                    <h4 class="my-3 text-capitalize text-dark">Standard Process</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="row-content" id="introduce">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive img-sv" src="~/assets/client/images/introduce/introduce1.jpg" alt="Tài nguyên Dynamics">
+                    <h3 class="name">Dynamic Resources</h3>
+                    <summary class="summary">
+                        Tài nguyên kỹ sư có thể mở rộng với tỷ lệ doanh thu thấp.
+                        Tiềm năng để cung cấp đúng người vào đúng thời điểm để đáp ứng nhu cầu kinh doanh của khách hàng.
+                    </summary>
+                    <!--END item -->
                 </div>
+                <!--END col-xs-12 -->
+
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive img-sv" src="~/assets/client/images/introduce/introduce2.jpg" alt="Bảo vệ">
+                    <h3 class="name">Security</h3>
+                    <summary class="summary">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                Môi trường làm việc an toàn dựa trên tiêu chuẩn ISO27001: 2013 được chứng nhận cũng như các tùy chỉnh cụ thể phù hợp với tiêu chuẩn của từng khách hàng
+                            </font>
+                        </font>
+                    </summary>
+                    <!--END item -->
+                </div>
+                <!--END col-xs-12 -->
+
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive img-sv" src="~/assets/client/images/introduce/introduce3.jpg" alt="Vietnam Merit">
+                    <h3 class="name">Vietnam Merit</h3>
+                    <summary class="summary">
+                        Điểm đến mới cho gia công phần mềm với chi phí cạnh tranh và môi trường ổn định
+                    </summary>
+                    <!--END item -->
+                </div>
+                <!--END col-xs-12 -->
+                <div class="clear-fix"></div>
+
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive img-sv" src="~/assets/client/images/introduce/introduce4.jpg" alt="Giao tiếp">
+                    <h3 class="name">Communication</h3>
+                    <summary class="summary">
+                        Khám phá và giải quyết các vấn đề dự án càng sớm càng tốt và cung cấp TRẢ TIẾP và TẦM NHÌN bằng nhiều kênh truyền thông hiệu quả và đa dạng
+                    </summary>
+                    <!--END item -->
+                </div>
+                <!--END col-xs-12 -->
+
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive img-sv" src="~/assets/client/images/introduce/introduce6.jpg" alt="Quy trình chuẩn">
+                    <h3 class="name">Standard Process</h3>
+                    <summary class="summary">
+
+                        Tích hợp các công cụ quản lý dự án trực tuyến để giúp khách hàng của chúng tôi truy cập trạng thái dự án thời gian thực và các chi tiết nhiệm vụ được phát triển bởi phương pháp quản lý kinh nghiệm, thực tiễn tổ chức của chúng tôi.
+
+                    </summary>
+                    <!--END item -->
+                </div>
+                <!--END col-xs-12 -->
+
+                <div class="col-xs-12 col-md-4">
+                    <img class="img-responsive img-sv" src="~/assets/client/images/introduce/introduce5.jpg" alt="Đổi mới công nghệ">
+                    <h3 class="name">Technology Innovation</h3>
+                    <summary class="summary">
+                        Tập trung vào Cloud Computing, Mobility, BI &amp; Analytics và các công nghệ mới khác và cung cấp cho khách hàng của chúng tôi để phát triển một thế hệ sản phẩm và giải pháp mới.
+                    </summary>
+                    <!--END item -->
+                </div>
+                <!--END col-xs-12 -->
+
             </div>
+            <!--END introduce -->
         </div>
+        <!--END introduce -->
     </div>
 </section>
 <!-- //about -->
+<section>
+    <div class="row-content" id="services">
+        <div class="container">
+            <h2 class="title">Our Offering Services </h2>
+            <div class="row">
+                <div id="owl-services" class="owl-carousel">
+                    @foreach (var item in listServices)
+                    {
+                        var url = "/Services/Detail/" + item.ID;
+                        <div class="item">
+                            <div class="col-xs-6 col-md-3">
+                                <a class="item-content" href="@url" title="@item.Name">
+                                    <p class="image">
+                                        <img class="img-responsive" src="@item.Image" alt="@item.Name">
+                                    </p>
+                                    <h3 class="name">@item.Name</h3>
+                                </a>
+                            </div>
+                            <!--END col-xs-6 -->
+                        </div>
+                    }
+                </div>
+            </div>
+            <!--END row -->
+        </div>
+        <!--END container -->
+    </div>
+    <div class="clear-fix"></div>
+</section>
 <!-- case studies -->
-<section class="case_w3ls  py-5" id="w3layouts_cs">
+<section class="  py-5" id="w3layouts_cs">
     <div class="container py-sm-5">
-        <!-- title description -->
-        @*<div class="row py-lg-5">
-                <div class="col-lg-5  bb-left">
-                    <span class="w3-line">case studies</span>
-                    <h3 class="agile-title">the new brand identity</h3>
-                </div>
-                <div class="col-lg-7 mt-lg-0 mt-3 px-lg-5">
-                    <p>
-                        Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci. Nulla accumsan
-                        ac elit in congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos Class aptent taciti
-                        sociosqu ad litora torquent p himenaeos.
-                    </p>
-                    <a class="btn btn-danger  mt-sm-4 text-capitalize" href="error.html" role="button">read more</a>
-                </div>
-            </div>*@
-        <!-- //title description -->
-        <!-- case studies row -->
         <h3 class="agile-title">Tin tức nổi bật</h3>
         <div class="row pt-5">
 
@@ -182,13 +323,13 @@
     </div>
 
 </section>
-<section class="case_w3ls  ">
+<section class="  vietiser">
     <div class="container py-sm-5">
         <h3 class="agile-title">Các VietISer nói gì?</h3>
         <div class="row pt-5">
 
             <div class="col-md-4 col-sm-6">
-                <div class="item post-133 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                <div class="item " style="min-height:205px;">
                     <div class="row">
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
@@ -204,7 +345,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="item post-129 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                <div class="item " style="min-height:205px;">
                     <div class="row">
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
@@ -222,7 +363,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="item post-28 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                <div class="item " style="min-height:205px;">
                     <div class="row">
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
@@ -240,7 +381,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="item post-131 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                <div class="item " style="min-height:205px;">
                     <div class="row">
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
@@ -258,7 +399,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="item post-127 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                <div class="item " style="min-height:205px;">
                     <div class="row">
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
@@ -276,7 +417,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-6">
-                <div class="item post-332 cpt_team type-cpt_team status-publish has-post-thumbnail hentry" style="min-height:205px;">
+                <div class="item " style="min-height:205px;">
                     <div class="row">
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">

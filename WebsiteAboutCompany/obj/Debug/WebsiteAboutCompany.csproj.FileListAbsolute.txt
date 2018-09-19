@@ -329,6 +329,7 @@ E:\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.csproj.
 E:\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.csproj.CopyComplete
 E:\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.dll
 E:\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.pdb
+E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\ApplicationInsights.config
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\libBox2D.so
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\WebsiteAboutCompany.dll.config
@@ -341,7 +342,6 @@ E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\csi.exe
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\csi.exe.config
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\csi.rsp
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
@@ -400,6 +400,7 @@ E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\amd64\Microsoft.VC
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\Antlr3.Runtime.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\Autofac.dll
+E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\CKFinder.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\CKSource.CKFinder.Connector.Config.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\CKSource.CKFinder.Connector.Core.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\CKSource.CKFinder.Connector.Host.Owin.dll
@@ -494,4 +495,3 @@ E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAbout
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.csproj.CopyComplete
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.pdb
-E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\CKFinder.dll

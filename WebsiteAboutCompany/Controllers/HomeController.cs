@@ -13,7 +13,7 @@ namespace WebsiteAboutCompany.Controllers
         private CompanyDbContext db = new CompanyDbContext();
         public ActionResult Index()
         {
-            var listSerVices = db.Services.OrderByDescending(x => x.CreateDate).Take(4).ToList();
+            var listSerVices = db.Services.OrderByDescending(x => x.CreateDate).Take(8).ToList();
             var listNews = db.News.Where(x=>x.CategoryID == 0).OrderByDescending(x => x.CreateDate).Take(6).ToList();
             ViewBag.NewServices = listSerVices;
             ViewBag.ListNews = listNews;
