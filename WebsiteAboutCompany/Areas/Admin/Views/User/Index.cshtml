@@ -59,14 +59,9 @@
                                     <td>@item.Email</td>
                                     <td><a href="#" class="btn-active" data-id="@item.ID">@Html.Raw(item.Status ? "<strong>Kích hoạt</strong>" : "Khoá")</a></td>
                                     <td>
-                                        <a href="/Admin/User/Edit/@item.ID">Sửa</a>
+                                        <a href="/Admin/User/Edit/@item.ID"><i class="fas fa-edit"></i></a>
                                         |
-                                        @Ajax.ActionLink("Xoá", "Delete", new { @id = item.ID }, new AjaxOptions
-                                   {
-                                       Confirm = "Bạn có muốn xoá bản ghi này?",
-                                       OnComplete = "$('#row_" + @item.ID + "').remove()",
-                                       HttpMethod = "Delete"
-                                   })
+                                        <a href="#" class="btnDelete" data-id="@item.ID"><i class="fas fa-trash"></i></a>
                                     </td>
                                 </tr>
                             }

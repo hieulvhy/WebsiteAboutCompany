@@ -686,8 +686,10 @@
     <Content Include="assets\admin\dist\css\sb-admin-2.css" />
     <Content Include="assets\admin\dist\css\timeline.css" />
     <Content Include="assets\admin\dist\js\sb-admin-2.js" />
+    <Content Include="assets\admin\js\controller\NewCategoryController.js" />
     <Content Include="assets\admin\js\controller\newsController.js" />
-    <Content Include="assets\admin\js\controller\productController.js" />
+    <Content Include="assets\admin\js\controller\ServicesCategoryController.js" />
+    <Content Include="assets\admin\js\controller\servicesController.js" />
     <Content Include="assets\admin\js\controller\userController.js" />
     <Content Include="assets\admin\js\flot-data.js" />
     <Content Include="assets\admin\js\jquery.validate.unobtrusive.min.js" />
@@ -1641,6 +1643,7 @@
     <Content Include="assets\client\css\bootstrap.css" />
     <Content Include="assets\client\css\counter.css" />
     <Content Include="assets\client\css\fontawesome-all.min.css" />
+    <Content Include="assets\client\css\home-20180414v1.min.css" />
     <Content Include="assets\client\css\jquery.countdown.css" />
     <Content Include="assets\client\css\popuo-box.css" />
     <Content Include="assets\client\css\service.css" />
@@ -1713,9 +1716,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\images\37930265_856950527840275_6838081787751563264_n.jpg" />
-    <Content Include="Images\images\DSC09468.jpg" />
-    <Content Include="Images\_thumbs\Images\37930265_856950527840275_6838081787751563264_n.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -2144,6 +2144,8 @@
     <Content Include="Views\Services\Detail.cshtml" />
     <Content Include="assets\admin\js\plugins\ckeditor\skins\moono-lisa\readme.md" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Views\News\News.cshtml" />
+    <Content Include="Views\News\Blogs.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -2197,9 +2199,6 @@
     <Folder Include="assets\admin\js\plugins\ckfinder\plugins\imageresize\bin\Release\" />
     <Folder Include="assets\admin\js\plugins\ckfinder\plugins\watermark\bin\Debug\" />
     <Folder Include="assets\admin\js\plugins\ckfinder\plugins\watermark\bin\Release\" />
-    <Folder Include="Data\files\" />
-    <Folder Include="Data\images\" />
-    <Folder Include="Images\files\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

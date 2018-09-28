@@ -90,13 +90,12 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
             }
             return View("Index");
         }
-        [HttpDelete]
+        [HttpPost]
         [HasCredential(RoleID = "DELETE_USER")]
         public ActionResult Delete(int id)
         {
-            new UserDao().Delete(id);
-
-            return RedirectToAction("Index");
+            var result =  new UserDao().Delete(id);
+            return Json(new {result}, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]

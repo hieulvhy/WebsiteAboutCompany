@@ -3,6 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var listServices = (List<Model.EF.Service>)ViewBag.NewServices;
     var listNews = (List<Model.EF.News>)ViewBag.ListNews;
+    var listBlogs = (List<Model.EF.News>)ViewBag.ListBlogs;
 }
 <style>
     .vietiser-img img {
@@ -47,39 +48,46 @@
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
         overflow: hidden;
-        height: 44px;
+        height: 110px;
         font-size: 14px;
     }
+
     .clear-fix {
         clear: both;
     }
+
     #services {
         float: left;
         width: 100%;
         background-color: #edf0f6 !important;
         padding: 40px 0px 30px;
     }
+
     .container {
         margin-right: auto;
         margin-left: auto;
         padding-left: 15px;
         padding-right: 15px;
     }
+
     #services .title {
         color: #3b5998;
         font-size: 24px;
         line-height: 30px;
         text-align: center;
     }
+
     .owl-carousel {
         display: block;
         width: 100%;
         z-index: 1;
     }
-    .owl-carousel, .owl-carousel .owl-item {
-        -webkit-tap-highlight-color: transparent;
-        position: relative;
-    }
+
+        .owl-carousel, .owl-carousel .owl-item {
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+        }
+
     .item-content-sv {
         text-align: center;
         -moz-transition: all 0.3s;
@@ -96,6 +104,7 @@
         margin: 0px;
         line-height: 80px;
     }
+
     #services .item-content img {
         vertical-align: middle;
         display: inline-block;
@@ -105,10 +114,12 @@
         -o-filter: grayscale(1);
         width: auto;
     }
+
     a {
         color: #333333;
         text-decoration: none;
     }
+
     .img-sv {
         border: 1px solid #dddddd;
         -moz-transition: all 0.3s;
@@ -119,6 +130,7 @@
         box-shadow: 1px 2px 5px -4px rgba(0,0,0,0.51);
         margin-bottom: 20px;
     }
+
     .vietiser {
         background-color: #edf0f6 !important;
     }
@@ -198,7 +210,7 @@
                 </div>
                 <!--END col-xs-12 -->
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-4" style="margin-bottom: 20px;">
                     <img class="img-responsive img-sv" src="~/assets/client/images/introduce/introduce3.jpg" alt="Vietnam Merit">
                     <h3 class="name">Vietnam Merit</h3>
                     <summary class="summary">
@@ -277,53 +289,71 @@
     </div>
     <div class="clear-fix"></div>
 </section>
-<!-- case studies -->
-<section class="  py-5" id="w3layouts_cs">
-    <div class="container py-sm-5">
-        <h3 class="agile-title">Tin tức nổi bật</h3>
-        <div class="row pt-5">
+<section class="  py-5">
+    <div class="container ">
+        <h3 class="agile-title">Hoạt động của công ty</h3>
 
-            @foreach (var item in listNews)
-            {
-                var url = "/News/Detail/" + item.ID;
-                <div class="col-lg-4 col-md-6">
-                    <div class="img1 img-grid   align-items-end justify-content-center p-3">
-                        <div class="img_text_w3ls">
-                            <a href="@url">
-                                <h4>
-                                    @if (item.Name.Length >= 50)
-                                    {
-                                        @(item.Name.Substring(0, 50) + "...")
-                                    }
-                                    else
-                                    {
-                                        @item.Name
-                                    }
-                                </h4>
-                            </a>
-                            <span> </span>
-                            <p>
-                                @if (item.Description.Length <= 160)
-                                {
-                                    @item.Description
-                                }
-                                else
-                                {
-                                    @(item.Description.Substring(0, 160) + "...")
-                                }
-                            </p>
+        <div class="kds-new-stream-wrapper">
+            <ul class="knsw-list" >
+                @foreach (var item in listBlogs)
+                {
+                    <li class="knswli clearfix " id="@item.ID">
+                        <div class="knswli-left fl">
+                            <a title="@item.Name" href="@Url.Action("Detail","News")/@item.ID" class="kscliw-ava"><img src="@item.Image" class="lazy" data-original="@item.Image" title="@item.Name" alt="@item.Name" width="250" height="155"></a>
                         </div>
-                    </div>
-                </div>
-            }
+                        <div class="knswli-right ">
+                            <h4 class="knswli-title"><a href="@Url.Action("Detail","News")/@item.ID" title="@item.Name" data-id="@item.ID" newstype="0">@item.Name</a></h4>
+                            @*<div class="knswli-meta">
+                                    <a href="http://genk.vn/song.chn" class="knswli-category" title="Sống">Sống</a> -
+                                    <span class="knswli-time" title="2018-09-20T21:27:00">3 giờ trước</span>
+                                </div>*@
+                            <span class="knswli-sapo">@item.Description</span>
+                            <div class="knswli-relate-wrap nodisplay">
 
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
         </div>
-        <!-- //case studies row -->
-
+        <div style="float: right; margin-top: 20px; margin-right: 20px">
+            <span><a href="@Url.Action("Blogs","News")">Xem Thêm  <i class="fas fa-arrow-right"></i></a></span>
+        </div>
     </div>
-
 </section>
-<section class="  vietiser">
+<!-- case studies -->
+<section class="  py-5   vietiser" id="w3layouts_cs">
+    <div class="container ">
+        <h3 class="agile-title">Tin tức công nghệ nổi bật</h3>
+
+        <div class="kds-new-stream-wrapper">
+            <ul class="knsw-list" >
+                @foreach (var item in listNews)
+                {
+                    <li class="knswli clearfix " id="@item.ID" >
+                        <div class="knswli-left fl"><a title="@item.Name" href="@Url.Action("Detail","News")/@item.ID" class="kscliw-ava"><img src="@item.Image" class="lazy" data-original="@item.Image" title="@item.Name" alt="@item.Name" width="250" height="155"></a>
+                        </div>
+                        <div class="knswli-right ">
+                            <h4 class="knswli-title"><a href="@Url.Action("Detail","News")/@item.ID" title="@item.Name" data-id="@item.ID" newstype="0">@item.Name</a></h4>
+                            @*<div class="knswli-meta">
+                            <a href="http://genk.vn/song.chn" class="knswli-category" title="Sống">Sống</a> -
+                            <span class="knswli-time" title="2018-09-20T21:27:00">3 giờ trước</span>
+                        </div>*@
+                            <span class="knswli-sapo">@item.Description</span>
+                            <div class="knswli-relate-wrap nodisplay">
+
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div style="float: right; margin-top: 20px; margin-right: 20px">
+            <span><a href="@Url.Action("News","News")">Xem Thêm  <i class="fas fa-arrow-right"></i></a></span>
+        </div>
+    </div>
+</section>
+<section>
     <div class="container py-sm-5">
         <h3 class="agile-title">Các VietISer nói gì?</h3>
         <div class="row pt-5">
@@ -333,7 +363,7 @@
                     <div class="row">
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
-                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n.jpg 960w" sizes="(max-width: 500px) 100vw, 500px">
+                                <img width="500" height="500" src="/Images/images/phuong.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22046032_2099312003686513_1928363827702951257_n.jpg 960w" sizes="(max-width: 500px) 100vw, 500px">
                             </figure>
                             <span>Mai Phương</span>
                             <p>- Kế toán trưởng</p>
@@ -350,7 +380,7 @@
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
 
-                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n.jpg 834w" sizes="(max-width: 500px) 100vw, 500px">
+                                <img width="500" height="500" src="/Images/images/trang.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/14192075_541474866054157_7894561055915060215_n.jpg 834w" sizes="(max-width: 500px) 100vw, 500px">
 
                             </figure>
                             <span>Đoàn Thị Trang</span>
@@ -368,7 +398,7 @@
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
 
-                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n.jpg 960w" sizes="(max-width: 500px) 100vw, 500px">
+                                <img width="500" height="500" src="/Images/images/du.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-768x768.jpg 768w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n-750x750.jpg 750w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/22154420_1287526871357206_6309523369919978709_n.jpg 960w" sizes="(max-width: 500px) 100vw, 500px">
 
                             </figure>
                             <span>Nguyễn Thùy Dung</span>
@@ -386,7 +416,7 @@
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
 
-                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-500x500.jpeg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-500x500.jpeg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-150x150.jpeg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-100x100.jpeg 100w" sizes="(max-width: 500px) 100vw, 500px">
+                                <img width="500" height="500" src="/Images/images/toan.jpeg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-500x500.jpeg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-150x150.jpeg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/1507534589634-100x100.jpeg 100w" sizes="(max-width: 500px) 100vw, 500px">
 
                             </figure>
                             <span>Nguyễn Đức Toàn</span>
@@ -404,7 +434,7 @@
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
 
-                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n.jpg 629w" sizes="(max-width: 500px) 100vw, 500px">
+                                <img width="500" height="500" src="/Images/images/dien.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/17156131_1123358657809619_7949193714683499023_n.jpg 629w" sizes="(max-width: 500px) 100vw, 500px">
 
                             </figure>
                             <span>Giang Văn Diện</span>
@@ -421,7 +451,7 @@
                     <div class="row">
                         <div class="col-xs-4 col-md-5">
                             <figure class="item-thumb vietiser-img" style="margin:0;">
-                                <img width="500" height="500" src="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-500x500.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n.jpg 539w" sizes="(max-width: 500px) 100vw, 500px">
+                                <img width="500" height="500" src="/Images/images/diep.jpg" class="attachment-ci_vietiser size-ci_vietiser wp-post-image" alt="" srcset="https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-500x500.jpg 500w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-150x150.jpg 150w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-300x300.jpg 300w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n-100x100.jpg 100w, https://tuyendung.vietis.com.vn/wp-content/uploads/2017/09/19510347_2320819871477012_908663917634114772_n.jpg 539w" sizes="(max-width: 500px) 100vw, 500px">
                             </figure>
                             <span>Nguyễn Văn Điệp</span>
                             <p>- Lập trình viên</p>

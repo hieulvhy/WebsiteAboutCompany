@@ -79,7 +79,7 @@
                 <h4><a href="@Url.Action("Detail","News")/@item.ID">@item.Name </a></h4>
                 <h5>@item.CreateDate , Posted by <span><a href="#">@item.CreateBy</a></span></h5>
                 <div class="blog_para">
-                    <p class="para1"><a href="@Url.Action("Detail","News")/@item.ID" rel="lightbox"><img class="img-news" src="http://streaming1.danviet.vn/upload/2-2015/images/2015-04-20/1434180134-qaamde_thuong_10_xcnq.jpg" alt=""></a>@item.Description</p>
+                    <p class="para1"><a href="@Url.Action("Detail","News")/@item.ID" rel="lightbox"><img class="img-news" src="@item.Image" alt=""></a>@item.Description</p>
                     <div class="clear"></div>
                 </div>
             </div>

@@ -36,11 +36,23 @@ namespace Model.Dao
         /// <param name="page"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        public IEnumerable<News> ListNewsPaging(ref int totalRecord,int page, int pageSize)
+        public IEnumerable<News> ListNewsAllPaging(ref int totalRecord,int page, int pageSize)
         {
-            IEnumerable<News> model = db.News.Where(x=>x.CategoryID == 0);
+            IEnumerable<News> model = db.News.Where(x=>x.CategoryID == 0 ||x.CategoryID == 2);
             totalRecord = model.Count();
             return model.OrderByDescending(x => x.CreateDate).Skip((page -1)*pageSize).Take(pageSize);
+        }
+        public IEnumerable<News> ListNewsPaging(ref int totalRecord, int page, int pageSize)
+        {
+            IEnumerable<News> model = db.News.Where(x => x.CategoryID == 0);
+            totalRecord = model.Count();
+            return model.OrderByDescending(x => x.CreateDate).Skip((page - 1) * pageSize).Take(pageSize);
+        }
+        public IEnumerable<News> ListBlogsPaging(ref int totalRecord, int page, int pageSize)
+        {
+            IEnumerable<News> model = db.News.Where(x => x.CategoryID == 2);
+            totalRecord = model.Count();
+            return model.OrderByDescending(x => x.CreateDate).Skip((page - 1) * pageSize).Take(pageSize);
         }
         public IEnumerable<News> ListRecruitmentPaging(ref int totalRecord, int page, int pageSize)
         {
@@ -106,7 +118,24 @@ namespace Model.Dao
             try
             {
                 var news = db.News.Find(id);
+                if (news == null) return false;
                 db.News.Remove(news);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+        public bool DeleteCategory(int id)
+        {
+            try
+            {
+                var category = db.CategoryNews.Find(id);
+                if (category == null) return false;
+                db.CategoryNews.Remove(category);
                 db.SaveChanges();
                 return true;
             }
@@ -123,9 +152,18 @@ namespace Model.Dao
         public bool ChangeStatus(int id)
         {
             var news = db.News.Find(id);
+            if (news == null) return true;
             news.Status = !news.Status;
             db.SaveChanges();
             return news.Status;
+        }
+        public bool ChangeStatusCategory(int id)
+        {
+            var category = db.CategoryNews.Find(id);
+            if (category == null) return true;
+            category.Status = !category.Status;
+            db.SaveChanges();
+            return category.Status;
         }
     }
 }

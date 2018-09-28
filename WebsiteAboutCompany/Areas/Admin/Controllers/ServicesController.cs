@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Model.Dao;
 using Model.EF;
 using PagedList;
 
@@ -19,14 +20,11 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         [HasCredential(RoleID = "VIEW_USER")]
         public ActionResult Index(string searchString, int page = 1, int pageSize = 10)
         {
-            
-            IEnumerable<Service> list = db.Services.OrderByDescending(x => x.CreateDate).ToPagedList(page, pageSize);
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                list = list.Where(x => x.Name.Contains(searchString) || x.Name.Contains(searchString)).ToList();
-            }
+            var dao = new ServiceDao();
+            var model = dao.ListAllPaging(searchString, page, pageSize);
+
             ViewBag.SearchString = searchString;
-            return View(list);
+            return View(model);
         }
 
         // GET: Admin/Services/Details/5
@@ -147,6 +145,16 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
         {
             var cate = db.CategoryServices.Where(x => x.Status == true).ToList();
             ViewBag.CategoryServicesID = new SelectList(cate, "ID", "Name", selectedId);
+        }
+        [HttpPost]
+        [HasCredential(RoleID = "EDIT_USER")]
+        public JsonResult ChangeStatus(int id)
+        {
+            var result = new ServiceDao().ChangeStatus(id);
+            return Json(new
+            {
+                status = result
+            });
         }
     }
 }

@@ -5502,6 +5502,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="assets/client/css/fontawesome-all.min.css">
       <publishTime>03/01/2018 09:00:50</publishTime>
     </File>
+    <File Include="assets/client/css/home-20180414v1.min.css">
+      <publishTime>09/21/2018 00:52:20</publishTime>
+    </File>
     <File Include="assets/client/css/jquery.countdown.css">
       <publishTime>04/25/2018 06:15:36</publishTime>
     </File>
@@ -5515,7 +5518,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2018 00:39:26</publishTime>
     </File>
     <File Include="assets/client/css/style.css">
-      <publishTime>09/19/2018 23:58:49</publishTime>
+      <publishTime>09/21/2018 00:47:10</publishTime>
     </File>
     <File Include="assets/client/css/style2.css">
       <publishTime>09/19/2018 23:49:53</publishTime>
@@ -6094,10 +6097,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="bin/WebsiteAboutCompany.dll">
-      <publishTime>09/20/2018 00:09:07</publishTime>
+      <publishTime>09/21/2018 13:40:32</publishTime>
     </File>
     <File Include="bin/WebsiteAboutCompany.pdb">
-      <publishTime>09/20/2018 00:09:07</publishTime>
+      <publishTime>09/21/2018 13:40:32</publishTime>
     </File>
     <File Include="bin/x86/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest">
       <publishTime>08/03/2018 21:39:37</publishTime>
@@ -6202,7 +6205,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/28/2018 21:54:54</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>09/20/2018 00:05:48</publishTime>
+      <publishTime>09/21/2018 01:21:27</publishTime>
     </File>
     <File Include="Views/Home/MainMenu.cshtml">
       <publishTime>08/09/2018 21:28:26</publishTime>
@@ -6211,25 +6214,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/22/2018 01:37:45</publishTime>
     </File>
     <File Include="Views/News/Detail.cshtml">
-      <publishTime>08/28/2018 22:54:18</publishTime>
+      <publishTime>09/21/2018 01:14:09</publishTime>
     </File>
     <File Include="Views/News/Index.cshtml">
-      <publishTime>09/17/2018 21:44:36</publishTime>
+      <publishTime>09/21/2018 01:13:13</publishTime>
     </File>
     <File Include="Views/News/Recruitment.cshtml">
-      <publishTime>09/17/2018 21:46:04</publishTime>
+      <publishTime>09/21/2018 01:13:33</publishTime>
     </File>
     <File Include="Views/Services/Detail.cshtml">
-      <publishTime>08/28/2018 22:59:22</publishTime>
+      <publishTime>09/20/2018 23:51:47</publishTime>
     </File>
     <File Include="Views/Services/Index.cshtml">
-      <publishTime>09/17/2018 21:48:27</publishTime>
+      <publishTime>09/20/2018 23:47:00</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>08/01/2018 23:21:34</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/19/2018 23:50:03</publishTime>
+      <publishTime>09/21/2018 00:46:22</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>08/01/2018 23:21:34</publishTime>

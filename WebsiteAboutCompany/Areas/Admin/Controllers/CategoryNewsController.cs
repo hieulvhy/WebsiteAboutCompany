@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Model.Dao;
 using Model.EF;
 
 namespace WebsiteAboutCompany.Areas.Admin.Controllers
@@ -113,6 +114,15 @@ namespace WebsiteAboutCompany.Areas.Admin.Controllers
             db.CategoryNews.Remove(categoryNew);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public JsonResult ChangeStatus(int id)
+        {
+            var result = new NewDao().ChangeStatusCategory(id);
+            return Json(new
+            {
+                status = result
+            });
         }
 
         protected override void Dispose(bool disposing)

@@ -15,8 +15,10 @@ namespace WebsiteAboutCompany.Controllers
         {
             var listSerVices = db.Services.OrderByDescending(x => x.CreateDate).Take(8).ToList();
             var listNews = db.News.Where(x=>x.CategoryID == 0).OrderByDescending(x => x.CreateDate).Take(6).ToList();
+            var listBlogs = db.News.Where(x => x.CategoryID == 2).OrderByDescending(x => x.CreateDate).Take(6).ToList();
             ViewBag.NewServices = listSerVices;
             ViewBag.ListNews = listNews;
+            ViewBag.ListBlogs = listBlogs;
             return View();
         }
         [ChildActionOnly]

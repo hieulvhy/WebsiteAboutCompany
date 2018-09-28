@@ -329,7 +329,6 @@ E:\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.csproj.
 E:\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.csproj.CopyComplete
 E:\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.dll
 E:\WebsiteAboutCompany\WebsiteAboutCompany\obj\Debug\WebsiteAboutCompany.pdb
-E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\ApplicationInsights.config
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\libBox2D.so
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\WebsiteAboutCompany.dll.config
@@ -342,6 +341,7 @@ E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\csi.exe
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\csi.exe.config
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\csi.rsp
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.dll
 E:\ĐA\New folder\WebsiteAboutCompany\WebsiteAboutCompany\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll

@@ -2637,7 +2637,10 @@ p.para1 {
 
 .img-news {
     width: 300px;
-    height: 200px;
+    height: auto;
 }
 /* clear float */
 /* -- //Responsive code -- */
+.oursv a {
+    color: darkgrey !important;
+}

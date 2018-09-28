@@ -9,7 +9,7 @@
     Danh sách dịch vụ
 }
 @section jsFooter{
-
+<script src="~/assets/admin/js/controller/servicesController.js"></script>
 }
 <div class="row">
     <div class="col-lg-12">
@@ -52,7 +52,7 @@
                                     <td>@item.CategoryServicesID</td>
                                     <td><a href="#" class="btn-active" data-id="@item.ID">@Html.Raw(item.Status ? "<strong>Kích hoạt</strong>" : "Khoá")</a></td>
                                     <td>
-                                        <a href="/Admin/Services/Edit/@item.ID">Sửa</a>
+                                        <a href="/Admin/Services/Edit/@item.ID"><i class="fas fa-edit"></i></a>
                                         |
                                         @Ajax.ActionLink("Xoá", "Delete", new { @id = item.ID }, new AjaxOptions
                                    {

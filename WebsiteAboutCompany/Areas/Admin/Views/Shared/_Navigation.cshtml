@@ -45,22 +45,22 @@
                 </li>
                 @if (((UserLogin)Session[WebsiteAboutCompany.Common.CommonConstants.USER_SESSION]).GroupID == "ADMIN")
                 {
-                    <li>
+                    @*<li>
                         <a href="/Admin/Contacts/Index"><i class="fas fa-file-contract"></i> Contacts</a>
-                    </li>
+                    </li>*@
                     <li>
-                        <a href="#"><i class="fa fa-user fa-fw"></i> Hệ thống<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
+                        <a href="/Admin/User/Index"><i class="fa fa-user fa-fw"></i> User @*<span class="fa arrow"></span>*@</a>
+                        @*<ul class="nav nav-second-level">*@
+                            @*<li>
                                 <a href="/Admin/UserGroups/Index">Nhóm người dùng</a>
-                            </li>
-                            <li>
+                            </li>*@
+                            @*<li>
                                 <a href="/Admin/User/Index">User</a>
-                            </li>
-                            <li>
+                            </li>*@
+                            @*<li>
                                 <a href="/Admin/Credentials/Index">Credentials</a>
-                            </li>
-                        </ul>
+                            </li>*@
+                        @*</ul>*@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
@@ -76,23 +76,23 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-elementor"></i> Quản lý chung<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fab fa-elementor"></i> Quản lý hệ thống<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li>
+                            @*<li>
                                 <a href="/Admin/Abouts/Index">Giới thiệu</a>
-                            </li>
-                            <li>
+                            </li>*@
+                            @*<li>
                                 <a href="/Admin/Footers/Index">Foooter</a>
-                            </li>
+                            </li>*@
                             <li>
                                 <a href="/Admin/Menus/Index">Menu</a>
                             </li>
                             <li>
                                 <a href="/Admin/MenuTypes/Index">Menu Type</a>
                             </li>
-                            <li>
+                            @*<li>
                                 <a href="/Admin/Slides/Index">Slide</a>
-                            </li>
+                            </li>*@
                             <li>
                                 <a href="/Admin/Feedbacks/Index">Phản hồi</a>
                             </li>
